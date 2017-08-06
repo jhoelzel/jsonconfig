@@ -1,10 +1,14 @@
-jsonconfig
-==============
-Package Name: jsonconfig
-Author      : jhoelzel
-URK         : github.com/jhoelzel/jsonconfig
-License     : MIT
-Version     : 0.0.1 
+# jsonconfig
+
+**Package Name:** jsonconfig
+
+**Author      :** jhoelzel
+
+**URL         :** github.com/jhoelzel/jsonconfig
+
+**License     :** [MIT](LICENSE)
+
+**Version     :** 0.0.1 
 
 Summary
 --------------
@@ -31,7 +35,7 @@ import (
 var config jsonconfig.Configuration
 
 func main() {
-    config = jsonconfig.Read("./config/config.json")
+    config = jsonconfig.Read("./config.json")
 }
 ```
 
@@ -40,8 +44,8 @@ Methods
 
 | Command | Description |
 | --- | --- |
-| jsonconfig.Read("./config/config.json") | Read the json file from "./config/config.json" and return Configuration |
-| jsonconfig.Write(Configuration, "./config/config.json") | Write the Configuration to "./config/config.json" |
+| jsonconfig.Read("./config.json") | Read the json file from "./config.json" and return Configuration |
+| jsonconfig.Write(Configuration, "./config.json") | Write the Configuration to "./config.json" |
 | jsonconfig.Configuration | The "Configuration" Type |
 
 The configuration File
@@ -53,12 +57,12 @@ The configuration File
 {
         "Globals": {
                 "url": "https://yourdomain.tld",
-				"theme": "default",
-				"date_format": "m/d/Y",
-				"time_format" : "h:ia",				
-				"decimal_seperator" : ".",
-				"language" : "en_us",
-				"version" : "0.0.1"
+                "theme": "default",
+                "date_format": "m/d/Y",
+                "time_format" : "h:ia",
+                "decimal_seperator" : ".",
+                "language" : "en_us",
+                "version" : "0.0.1"
         },
         "Admin": {
                 "email": "admin@yourdomain.tld",
@@ -96,7 +100,7 @@ Your needs may be different, but do not despair! You may simply hit the fork but
 
 To do that change the following files:
 
-| models.go            | main_test.go                                 |
+| [models.go](models.go)            | [main_test.go](main_test.go)                                 |
 | -------------        | ------------- 
 | add new Models here  | make sure your new Models are also tested    |
 
